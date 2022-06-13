@@ -8,6 +8,12 @@ export class ProductCtrl {
 	}
 	getOne(req: Request, res: Response) {
 		// write the logic here
+		const { id } = req.params
+		const user = ProductService.getOne(id)
+		if (!user) {
+			res.status(400).send('Product not found')
+		}
+		res.send(res)
 	}
 	create(req: Request, res: Response) {
 		// write the logic here

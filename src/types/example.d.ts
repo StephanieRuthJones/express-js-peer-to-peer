@@ -1,9 +1,7 @@
-export interface User {
-	id: string
-	isActive: boolean
-	avatar: string
-	username: string
-	gender: 'male' | 'female'
-	email: string
-	tags: string[]
+export interface Product {
+	id: number
+	product_name: string
+	supplier: string
+	quantity: number
+	unit_cost: string
 }

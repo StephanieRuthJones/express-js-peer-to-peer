@@ -1,11 +1,11 @@
 /* THIS COMPONENT INTERACTS WITH THE DATA BASE */
 
 import { User } from '../types/example'
-import users from './example.json'
+import products from './products.json'
 
-export class ExampleService {
+export class ProductService {
 	getAll() {
-		return users
+		return products
 	}
 	getOne(id: string) {
 		const user = users.find((user) => user.id === id)
@@ -25,4 +25,4 @@ export class ExampleService {
 	}
 	deleteOne(id: number) {}
 }
-export default new ExampleService()
+export default new ProductService()

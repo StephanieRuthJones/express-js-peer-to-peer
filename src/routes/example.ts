@@ -1,8 +1,8 @@
 import { Router, Request, Response } from 'express'
-import ExampleCtrl from '../controllers/example'
+import ProductCtrl from '../controllers/productctrl'
 
 const router = Router()
 
-router.get('/', ExampleCtrl.getAll)
+router.get('/', ProductCtrl.getAll)
 
 export default router
