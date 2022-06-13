@@ -1,11 +1,11 @@
 import express, { Application } from 'express'
 
-import exampleRouter from './routes/example'
+import productRouter from './routes/product'
 
 const app: Application = express()
 
 /* ROUTES */
-app.use('/example', exampleRouter)
+app.use('/', productRouter)
 
 /* LISTENING */
 const PORT: Number = 4000
