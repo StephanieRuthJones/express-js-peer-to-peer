@@ -1,18 +1,13 @@
 import { Request, Response } from 'express'
-import ExampleService from '../services/example'
+import ProductService from '../services/products'
 
 /* THIS CONTROLLER WILL PARSE THE REQUEST AND CALL THE RIGHT SERVICE ACTION*/
-export class ExampleCtrl {
+export class ProductCtrl {
 	getAll(req: Request, res: Response) {
-		res.json(ExampleService.getAll())
+		res.json(ProductService.getAll())
 	}
 	getOne(req: Request, res: Response) {
-		const { id } = req.params
-		const user = ExampleService.getOne(id)
-		if (!user) {
-			res.status(400).send('User not found')
-		}
-		res.send(res)
+		// write the logic here
 	}
 	create(req: Request, res: Response) {
 		// write the logic here
@@ -25,4 +20,4 @@ export class ExampleCtrl {
 	}
 }
 
-export default new ExampleCtrl()
+export default new ProductCtrl()
